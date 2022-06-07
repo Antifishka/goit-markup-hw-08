@@ -1,0 +1,66 @@
+.mailing-form {
+    display: flex;
+    align-items: center;
+
+    &__group {
+            margin-right: 12px;
+        }
+    
+        &__input {
+            width: 358px;
+            height: 50px;
+            padding-left: 16px;
+            outline: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+    
+            background-color: transparent;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+    
+            transition: border-color var(--animation);
+        }
+
+        &__input:focus {
+            border-color: var(--accent-color);
+        }
+    
+        &__input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+    
+            opacity: 0;
+            transition: opasity var(--animation);
+        }
+    
+        &__input:focus::placeholder {
+            opacity: 1;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 28px;
+    
+            text-align: center;
+    
+            transition: background-color var(--animation);
+        }
+    
+        &__icon {
+            fill: currentColor;
+            margin-left: 10px;
+        }
+}
+
+
+
+
+
