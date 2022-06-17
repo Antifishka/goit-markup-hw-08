@@ -2,13 +2,20 @@
 
 &__list {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 50px;
-    }
+        justify-content: flex-start;
+        margin-bottom: 40px;
+        @include mq(tablet){
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        @include mq(desktop){
+            margin-bottom: 50px;
+        }
+        row-gap: 15px;
+        column-gap: 8px;
 
-    &__item:not(:last-child) {
-        margin-right: 8px;
     }
 
     &__btn {

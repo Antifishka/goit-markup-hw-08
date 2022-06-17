@@ -9,6 +9,7 @@
 
     background-color: rgba(0, 0, 0, 0.2);
 
+    overflow-y: scroll;
     opacity: 1;
     transition: opacity var(--animation), visibility var(--animation);
 }
@@ -27,7 +28,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 528px;
+    min-width: 450px;
+    @include mq(desktop){
+        min-width: 528px;
+    }
     padding: 40px;
 
     background-color: #FFFFFF;
@@ -45,11 +49,10 @@
             margin-bottom: 12px;
     
             color: var(--secondary-text-color);
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 1.15;
-            text-align: center;
-            letter-spacing: 0.03em;
+            @include fonts(700, 20px, 1.5, 0.03em, null);
+            @include mq(desktop){
+                @include fonts(700, 20px, 1.15, 0.03em, null);
+            }
         }
     
         &__field {
@@ -58,6 +61,7 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
+            color: var(--secondary-text-color);
     
             text-align: left;
         }
@@ -131,10 +135,10 @@
             margin-bottom: 30px;
     
             color: var(--main-text-color);
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 1.71;
-            letter-spacing: 0.03em;
+            @include fonts(400, 12px, 1.17, 0.03em, null);
+            @include mq(desktop){
+                @include fonts(400, 14px, 1.71, 0.03em, null);
+            }
         }
     
         &__custom-checkbox {
@@ -178,6 +182,10 @@
         &__link {
             color: var(--accent-color);
         }
+}
+
+.modal-form__checkbox-text{
+    min-width: 343px;
 }
 
 .btn-close {
